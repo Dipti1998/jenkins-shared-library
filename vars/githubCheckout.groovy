@@ -1,4 +1,4 @@
-def call() {
-    echo "Checking out from GitHub"
-    git url: 'https://github.com/your-org/your-repo.git', branch: 'main'
+def call(String repoUrl, String branchName) {
+    echo "Checking out from repo: ${repoUrl}, branch: ${branchName}"
+    git url: repoUrl, branch: branchName
 }
